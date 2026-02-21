@@ -33,40 +33,37 @@ export default function Home() {
       <h1 style={styles.title}>Optimal</h1>
       <p style={styles.subtitle}>Your AI-powered life improvement coach</p>
       
-      {/* Main Stats Grid */}
       <h2 style={styles.sectionTitle}>Daily Progress</h2>
       <div style={styles.statsGrid}>
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í´¥ Momentum</p>
+          <p style={styles.statLabel}>Momentum</p>
           <p style={styles.statValue}>{momentum}</p>
           <p style={styles.statUnit}>days</p>
         </div>
         
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í¾¯ Focus</p>
+          <p style={styles.statLabel}>Focus</p>
           <p style={styles.statValue}>{focusScore}%</p>
           <p style={styles.statUnit}>score</p>
         </div>
         
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>âš¡ Energy</p>
+          <p style={styles.statLabel}>Energy</p>
           <p style={styles.statValue}>{energyLevel}</p>
           <p style={styles.statUnit}>/10</p>
         </div>
         
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í³‹ Tasks</p>
+          <p style={styles.statLabel}>Tasks</p>
           <p style={styles.statValue}>{taskPercentage}%</p>
           <p style={styles.statUnit}>{completedTasks}/{totalTasks}</p>
         </div>
       </div>
 
-      {/* Health Stats Grid */}
       <h2 style={styles.sectionTitle}>Health & Wellness</h2>
       <div style={styles.statsGrid}>
-        {/* Sleep Card */}
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í¸´ Sleep</p>
+          <p style={styles.statLabel}>Sleep</p>
           <p style={styles.statValue}>{sleepPercentage}%</p>
           <p style={styles.statUnit}>{sleepHours}/{sleepGoal}h</p>
           {!showSleepInput ? (
@@ -93,42 +90,36 @@ export default function Home() {
           )}
         </div>
         
-        {/* Workouts Card */}
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í²ª Workouts</p>
+          <p style={styles.statLabel}>Workouts</p>
           <p style={styles.statValue}>{workoutPercentage}%</p>
           <p style={styles.statUnit}>{workoutsCompleted}/{workoutsGoal}</p>
           <button 
             onClick={incrementWorkout}
             style={styles.smallButton}
-            disabled={workoutsCompleted >= workoutsGoal}
           >
             + Workout
           </button>
         </div>
         
-        {/* Water Card */}
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>í²§ Water</p>
+          <p style={styles.statLabel}>Water</p>
           <p style={styles.statValue}>{waterPercentage}%</p>
           <p style={styles.statUnit}>{waterGlasses}/{waterGoal} glasses</p>
           <button 
             onClick={incrementWater}
             style={styles.smallButton}
-            disabled={waterGlasses >= waterGoal}
           >
             + Water
           </button>
         </div>
         
-        {/* Quick Actions Card */}
         <div style={styles.statCard}>
-          <p style={styles.statLabel}>âš¡ Quick Actions</p>
+          <p style={styles.statLabel}>Quick Actions</p>
           <div style={styles.buttonGroup}>
             <button 
               onClick={completeTask}
               style={styles.smallButton}
-              disabled={completedTasks >= totalTasks}
             >
               + Task
             </button>
@@ -142,24 +133,22 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div style={styles.actionButtons}>
         <button 
           onClick={incrementMomentum}
           style={styles.primaryButton}
         >
-          í´¥ Build Momentum
+          Build Momentum
         </button>
         
         <button 
           onClick={resetDaily}
           style={styles.secondaryButton}
         >
-          í´„ New Day
+          New Day
         </button>
       </div>
       
-      {/* Motivational Quote */}
       <div style={styles.quoteContainer}>
         <p style={styles.quote}>"The secret of getting ahead is getting started."</p>
         <p style={styles.quoteAuthor}>- Mark Twain</p>
@@ -193,7 +182,6 @@ const styles = {
     fontWeight: '600',
     color: '#333',
     marginBottom: '20px',
-    textAlign: 'left' as const,
   },
   statsGrid: {
     display: 'grid',
@@ -237,10 +225,6 @@ const styles = {
     fontSize: '12px',
     cursor: 'pointer',
     marginTop: '8px',
-    ':disabled': {
-      backgroundColor: '#ccc',
-      cursor: 'not-allowed',
-    },
   },
   inputForm: {
     display: 'flex',
