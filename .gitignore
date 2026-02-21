@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+package-lock.json
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Large files - BLOCK THESE!
+*.mp4
+*.mp3
+*.avi
+*.mov
+*.mkv
+*.pdf
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.exe
+*.dmg
+*.iso
+*.bin
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.txt
+*.docx
+*.xlsx
+
+# Specific to your situation
+../../*
+!../../Projects/optimal-simple/
